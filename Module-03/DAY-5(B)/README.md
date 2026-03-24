@@ -19,9 +19,8 @@ To write a Java program to find the largest digit in a given number using Wrappe
 8. Stop the program.
 
 ## PROGRAM:
-
-## Developed by: B.VIMALRAJ
-## RegisterNumber: 212224230304
+## Developed By : D Karthikeyan
+## Register Number : 212224230115
 
 
 
