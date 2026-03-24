@@ -1,100 +1,88 @@
-# Ex.No:4(C)    CONSTRUCTOR CHAINING(SUPER KEYWORD)
+# Ex.No:4(C)  COMPOSITION IN JAVA
+
+## QUESTION:
+Implement a system where a Library contains multiple Book objects. Each Book is created inside the Library. Books can't exist independently (Composition).
 
 ## AIM:
-To Create a Java program to implement super keyword in constructor.
+To architect a tightly coupled Library–Book ecosystem where Book objects are fully lifecycle-dependent on the Library. This demonstrates Composition by ensuring books are instantiated, managed, and destroyed exclusively through the Library container.
 
 ## ALGORITHM :
-Step 1: Start
-
-Step 2: Define a class Gadgets
-
-a. Create a method display()
-
-b. Inside display(), print "I am a Gadget"
-
-Step 3: Define a class Parrot that extends Gadgets
-
-a. Override the display() method
-
-b. Inside the overridden display(), print "I am a Laptop"
-
-c. Create a new method print()
-
-d. Inside print(), use super.display() to call the parent class (Gadgets) version of display()
-
-Step 4: Define the Main class with main() method
-
-a. Create an object obj of class Parrot
-
-b. Call obj.display() → Executes Parrot class's display() method
-
-c. Call obj.print() → Executes Parrot class's print() method, which in turn calls Gadgets class's display() method using super
-
-Step 5: End
-
-
-
-
+1.	Start the program.
+2.	Import the necessary package 'java.util'
+3.	Instantiate the Library object that internally creates and retains Book instances.
+4.	Read user inputs for book details and populate the Library.
+5.	Trigger the Library’s display function to showcase all composed Book objects.
+6.	Terminate the program lifecycle.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Constructor Chaining using Java
+Program to implement a Composition Concepts in Java
 Developed by: D Karthikeyan
-RegisterNumber:  212224230115
+RegisterNumber: 212224230115
 */
 ```
 
-## Sourcecode.java:
+## SOURCE CODE:
 
 ```
+import java.util.*;
 
-class Gadgets {
+class Book {
+    private String title;
+    private String author;
 
-  void display()
-  {
-      System.out.println("I am a Gadget");
-  }
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
+
+    public String getDetails() {
+        return "- " + title + " by " + author;
+    }
 }
 
-class Parrot extends Gadgets {
+class Library {
+    private List<Book> books;
 
-void display()
-{
-    System.out.println("I am a Laptop");
-}
-void print()
-{
-    super.display();
-}
-  
+    public Library() {
+        books = new ArrayList<>();
+    }
+
+    public void addBook(String title, String author) {
+        books.add(new Book(title, author));
+    }
+
+    public void showBooks() {
+        System.out.println("Books in Library:");
+        for (Book b : books) {
+            System.out.println(b.getDetails());
+        }
+    }
 }
 
 public class Main {
-  public static void main(String[] args) {
-      
-      Parrot obj=new Parrot();
-      obj.display();
-      obj.print();
-  }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine());
+        Library library = new Library();
+
+        for (int i = 0; i < n; i++) {
+            String title = sc.nextLine();
+            String author = sc.nextLine();
+            library.addBook(title, author);
+        }
+
+        library.showBooks();
+        sc.close();
+    }
 }
-
-
 ```
-
-
-
-
-
 
 ## OUTPUT:
 
-<img width="410" height="280" alt="image" src="https://github.com/user-attachments/assets/aa9e206e-6856-429a-b2fa-810e9942856f" />
-
-
+<img width="703" height="428" alt="image" src="https://github.com/user-attachments/assets/061f969e-2e6c-4458-a579-c654e4a63ecb" />
 
 ## RESULT:
-Thus the java program for constructor chaining was executed successfully.
 
-
-
+Thus the output is executed successfully.
