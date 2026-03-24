@@ -29,8 +29,8 @@ To write a Java program to simulate this elevator logic for a given floor number
 
 ## PROGRAM:
 
-## Developed by: B.VIMALRAJ
-## RegisterNumber:  212224230304
+## Developed By : D Karthikeyan
+## Register Number : 21222430115
 
 
 
