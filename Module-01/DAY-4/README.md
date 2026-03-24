@@ -34,8 +34,8 @@ To write a Java Program to Find the Average of Array Elements.
 
 ## PROGRAM:
 
-## Developed by: B.VIMALRAJ
-## RegisterNumber: 212224230304 
+## Developed By : D Karthikeyan
+## Register Number : 212224230115
 
 
 ## SOURCE CODE:
