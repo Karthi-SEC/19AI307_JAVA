@@ -1,80 +1,60 @@
-# Ex.No:4(A)  JAVA CONSTRUCTOR
+# Ex.No:4(A) EXCEPTION HANDLING
+
+## QUESTION:
+Write a program that reads two integers and divides the first by the second. Handle the case when division by zero occurs.
+
 ## AIM:
-To create a Java program using constructor to print the circumference of rectangle.[l=5,w=6]
+To implement exception handling in Java by safely performing division and managing division-by-zero errors using try–catch blocks.
 
 ## ALGORITHM :
-1.  1.	Start the Program.
-2.	Define a class `circum`
-3.	Inside the class, define two integer variables `l` and `w` with values 5 and 6, respectively
-4.	Create a constructor `circum()`:
--	a) Calculate the `circumference` as `2 * (l + w)`
--	b) Print the `circumference` twice with different labels ("Area of First Rectangle" and "Area of Second Rectangle")
-5.	In `main`, create an object `sc` of the `circum` class
-6.	End
-
-
-
-
+1.	Start the program.
+2.	Import the necessary package 'java.util'
+3.	Read two integers from the user.
+4.	Use a try block to perform division.
+5.	Catch any division-by-zero exceptions using a catch block.
+6.	Display the appropriate output or error message.
+7.	Stop the program.
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Constructor using Java
+Program to implement a Exception Handling using Java
 Developed by: D Karthikeyan
-RegisterNumber:  212224230115
+RegisterNumber: 212224230115
 */
 ```
 
-## Sourcecode.java:
+## SOURCE CODE:
 
 ```
-class Rectangle 
-{ 
-    int l; 
-    int b; 
+import java.util.Scanner;
+
+public class Main{
     
-    Rectangle(int l, int b) 
-    {  
-        this.l = 5;
-        this.b = 6;
-    } 
-    
-    Rectangle(Rectangle obj) 
-    {
-        this.l = obj.l;
-        this.b = obj.b;
-    } 
-    
-    int circumference() 
-    { 
-        return 2*(this.l + this.b)+8;
-    } 
- } 
-class prog 
-{ 
-    public static void main(String[] args) 
-    { 
-        Rectangle firstRect = new Rectangle(5,6); 
-        Rectangle secondRect = new Rectangle(firstRect); 
+    public static void main(String[] args) {
         
-        System.out.println("Area  of First Rectangle : "+firstRect.circumference());
-        System.out.print("Area of First Second Rectangle : "+secondRect.circumference());
-     
-    } 
-} 
- 
-
+        Scanner scan = new Scanner(System.in);
+        
+        int a,b;
+        
+        try{
+            a = scan.nextInt();
+            b = scan.nextInt();
+            System.out.println("Result: "+a/b);
+        }
+        
+        catch(Exception e){
+            System.out.println("Error: Division by zero");
+        }
+        
+    }
+}
 ```
-
-
-
-
 
 ## OUTPUT:
-<img width="854" height="286" alt="image" src="https://github.com/user-attachments/assets/5967b5ba-5c90-4998-8514-4f0f03e6d4b0" />
 
-
-
+<img width="553" height="253" alt="image" src="https://github.com/user-attachments/assets/b1e003cc-90fd-4740-b72c-ade72a0b4e14" />
 
 ## RESULT:
-Thus the Java program using constructor to print the circumference of rectangle was executed successfully.
+
+Thus the output is executed successfully.
