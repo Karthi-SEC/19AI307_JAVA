@@ -30,8 +30,8 @@ To create an Employee class where the display() method returns the current objec
 
 ## PROGRAM:
 
-## Developed by: B.VIMALRAJ
-## RegisterNumber: 212224230304
+## Developed By : D Karthikeyan
+## Register Number : 212224230115
 
 
 ## SOURCE CODE:
